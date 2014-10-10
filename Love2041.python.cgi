@@ -35,6 +35,12 @@ def footer():
 	"""
 
 
+def main_page():
+	print """
+	<img src="images/logo.png>
+	"""
+
+
 
 header(title = "Love2041",background = "D4A1F6")
 footer()

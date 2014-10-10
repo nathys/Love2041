@@ -36,5 +36,5 @@ def footer():
 
 
 
-header(title = "Love2041",background = "FF33CC")
+header(title = "Love2041",background = "D4A1F6")
 footer()

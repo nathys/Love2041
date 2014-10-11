@@ -43,7 +43,7 @@ def main_page(username):
 	f = open(file,"r")
 	hobbies = []
 	for line in f:
-		if namecounter = 1:
+		if namecounter == 1:
 			name = re.sub("\t|\n| +", "", line)
 			namecounter = 0
 		if re.search("name:",line):

@@ -35,13 +35,19 @@ def footer():
 	"""
 
 
-def main_page():
+def main_page(username):
 	print """
 	<img src="./images/logo.png" style="horizontal-align:middle; text-align:center" alt="Love2041">
 	"""
+	file = "students/"+ username + "/profile.txt"
+	f = open(file,"r")
+	print """
+	<text> %s </text>
+	""" % f
+	
 
 
 
 header(title = "Love2041",background = "D4A1F6")
-main_page()
+main_page(username = "TenderPuppy60")
 footer()

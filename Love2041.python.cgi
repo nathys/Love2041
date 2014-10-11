@@ -127,7 +127,13 @@ def main_page(username):
 	</text>
 	""" % info
 	
+	print """
+	<pre>
 	
+	<form action="" method="post">
+	<input type="submit" value="Next Profile"/>
+	</pre>
+	"""
 
 
 

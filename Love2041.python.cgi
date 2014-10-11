@@ -43,7 +43,7 @@ def main_page(username):
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
 	hobbies = []
-	moview = []
+	movies = []
 	namecounter = 0
 	moviecounter = 0
 	name = ""
@@ -54,7 +54,7 @@ def main_page(username):
 		if moviecounter == 1:
 			if re.search("^\s",line):
 				movie = re.sub("\t|\n|  +","",line)
-				movies.append(hobby)
+				movies.append(movie)
 			else:
 				moviecounter = 0
 				

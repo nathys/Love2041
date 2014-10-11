@@ -44,20 +44,24 @@ def main_page(username):
 	f = open(file,"r")
 	hobbies = []
 	namecounter = 0
+	moviecounter = 0
 	name = ""
 	for line in f:
 		if namecounter == 1:
 			name = re.sub("\t|\n|  +", "", line)
 			namecounter = 0
-		if re.search("name:",line):
-			namecounter = 1
-		if re.search("favourite_movies",line):
-			newline = f.readline()
-			while re.search("^\s",newline):
+		if moviecounter == 1:
+			if re.search("^\s",line):
 				hobby = re.sub("\t|\n|  +","",newline)
 				hobbies = hobbies.append(hobby)
 				newline = f.readline()
-			
+			else:
+				moviecounter = 0
+				
+		if re.search("name:",line):
+			namecounter = 1
+		if re.search("favourite_movies",line):
+			moviecounter = 1	
 	hobbylist = '\n'.join(hobbies)
 	movies = ""
 	info = {"1":username, "2":name, "3":movies, "4":hobbylist}

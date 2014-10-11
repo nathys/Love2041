@@ -88,7 +88,7 @@ def main_page(username):
 			moviecounter = 1
 		if re.search("^favourite_hobbies",line):
 			hobbycounter = 1
-		if re.search("^favourite_tv_shows",line):
+		if re.search("^favourite_TV_shows",line):
 			showcounter = 1
 		if re.search("^favourite_books",line):
 			bookcounter = 1

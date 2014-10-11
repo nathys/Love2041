@@ -4,6 +4,8 @@ import re
 import os
 import cgi
 import cgitb
+import os
+import random
 
 
 
@@ -134,9 +136,23 @@ def main_page(username):
 	<input type="submit" value="Next Profile"/>
 	</pre>
 	"""
+	
+get_profile():
+	number = randint(1,len(os.litdir())
+	counter = 0
+	for line in os.listdir
+	if counter >= number:
+		username = line
+		break
+	else:
+		counter++
+	return username
+	
+	
+	
+	
 
-
-
+username = get_profile()
 header(title = "Love2041",background = "D4A1F6")
-main_page(username = "TenderPuppy60")
+main_page(username)
 footer()

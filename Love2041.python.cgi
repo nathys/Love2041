@@ -138,9 +138,9 @@ def main_page(username):
 	"""
 	
 def get_profile():
-	number = randint(1,len(os.litdir()))
+	number = randint(1,len(os.litdir('./')))
 	counter = 0
-	direcs = os.listdir()
+	direcs = os.listdir('./')
 	for line in direcs
 	if counter >= number:
 		username = line

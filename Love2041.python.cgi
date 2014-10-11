@@ -61,7 +61,7 @@ def main_page(username):
 			namecounter = 1
 		if re.search("favourite_movies",line):
 			moviecounter = 1	
-	hobbylist = hobbies.join("\n")
+	hobbylist = "\n".join(hobbies)
 	movies = ""
 	info = {"1":username, "2":name, "3":movies, "4":hobbylist}
 	print """

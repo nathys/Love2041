@@ -45,6 +45,7 @@ def main_page(username):
 	for line in f:
 		if namecounter = 1:
 			name = re.sub("\t|\n| +", "", line)
+			namecounter = 0
 		if line = re.search("name:",line):
 			namecounter = 1
 	print """

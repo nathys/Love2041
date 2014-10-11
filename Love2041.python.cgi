@@ -137,10 +137,11 @@ def main_page(username):
 	</pre>
 	"""
 	
-get_profile():
-	number = randint(1,len(os.litdir())
+def get_profile():
+	number = randint(1,len(os.litdir()))
 	counter = 0
-	for line in os.listdir
+	direcs = os.listdir()
+	for line in direcs
 	if counter >= number:
 		username = line
 		break

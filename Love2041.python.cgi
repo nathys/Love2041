@@ -146,7 +146,7 @@ def get_profile():
 			username = line
 			break
 		else:
-			counter++
+			counter+=1
 	return username
 	
 	

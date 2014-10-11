@@ -41,9 +41,17 @@ def main_page(username):
 	"""
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
+	
+	for line in f:
+		if namecounter = 1:
+			name = re.sub("\t|\n| +", "", line)
+		if line = re.search("name:",line):
+			namecounter = 1
 	print """
-	<text> %s </text>
-	""" % f.read()
+	<text> Name:
+	%s
+	</text>
+	""" % name
 	
 
 

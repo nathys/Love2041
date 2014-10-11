@@ -52,9 +52,8 @@ def main_page(username):
 			namecounter = 0
 		if moviecounter == 1:
 			if re.search("^\s",line):
-				hobby = re.sub("\t|\n|  +","",newline)
+				hobby = re.sub("\t|\n|  +","",line)
 				hobbies = hobbies.append(hobby)
-				newline = f.readline()
 			else:
 				moviecounter = 0
 				

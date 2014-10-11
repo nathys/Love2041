@@ -37,22 +37,49 @@ def footer():
 
 def main_page(username):
 	print """
-	<img src="./images/logo.png" style="horizontal-align:middle; text-align:center" alt="Love2041">
+	<img src="./images/logo.png" style="vertical-align:middle; text-align:center" alt="Love2041">
 	"""
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
-	
+	hobbies = []
 	for line in f:
 		if namecounter = 1:
 			name = re.sub("\t|\n| +", "", line)
 			namecounter = 0
-		if line = re.search("name:",line):
+		if re.search("name:",line):
 			namecounter = 1
+		if re.search("favourite_movies",line):
+			newline = f.readline()
+			while re.search("^\s",newline):
+				hobby = re.sub("\t|\n|  +","",newline)
+				hobbies = hobbies.append(hobby)
+				newline = f.readline()
+			
+	hobbylist = '\n'.join(hobbies)
+	movies = ""
+	info = {"1":username, "2":name, "3":movies, "4":hobbylist}
 	print """
-	<text> Name:
-	%s
+	<text> 
+	
+	
+	<img src="./students/$(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo"
+	
+	
+	Name:
+	
+	%(2)s
+	
+	
+	Favourite Movies:
+	
+	$(3)s
+	
+	Hobbies:
+	
+	$(4)s
 	</text>
-	""" % name
+	""" % info
+	
 	
 
 

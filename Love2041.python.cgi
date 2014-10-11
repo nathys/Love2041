@@ -82,15 +82,15 @@ def main_page(username):
 			else:
 				bookcounter = 0
 		
-		if re.search("name:",line):
+		if re.search("^name:",line):
 			namecounter = 1
-		if re.search("favourite_movies",line):
+		if re.search("^favourite_movies",line):
 			moviecounter = 1
-		if re.search("favourite_hobbies",line):
+		if re.search("^favourite_hobbies",line):
 			hobbycounter = 1
-		if re.search("favourite_tv_shows",line):
+		if re.search("^favourite_tv_shows",line):
 			showcounter = 1
-		if re.search("favourite_books",line):
+		if re.search("^favourite_books",line):
 			bookcounter = 1
 	movielist = "\n\t".join(movies)
 	hobbylist = "\n\t".join(hobbies)

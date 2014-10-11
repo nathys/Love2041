@@ -37,7 +37,7 @@ def footer():
 
 def main_page():
 	print """
-	<img src="./images/logo.png" align="right" alt="Love2041">
+	<img src="./images/logo.png" style="horizontal-align:middle; text-align:center" alt="Love2041">
 	"""
 
 

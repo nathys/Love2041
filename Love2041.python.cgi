@@ -42,9 +42,11 @@ def main_page(username):
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
 	hobbies = []
+	namecounter = 0
+	name = ""
 	for line in f:
 		if namecounter == 1:
-			name = re.sub("\t|\n| +", "", line)
+			name = re.sub("\t|\n|  +", "", line)
 			namecounter = 0
 		if re.search("name:",line):
 			namecounter = 1

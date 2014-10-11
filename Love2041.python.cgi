@@ -67,24 +67,25 @@ def main_page(username):
 	info = {"1":username, "2":name, "3":movielist, "4":hobbylist}
 	print """
 	<text> 
-	\\n\\n
+	<pre>
 	
 	
-	<img src="./students/%(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo">\\n\\n
+	<img src="./students/%(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo">
 	
 	
-	Name:\\n
+	Name:
 	
-	%(2)s\\n
+	%(2)s
 	
 	
-	Favourite Movies:\\n
+	Favourite Movies:
 	
-	    %(3)s\\n
+	%(3)s
 	
-	Hobbies:\\n
+	Hobbies:
 	
-	    %(4)s\\n
+	%(4)s
+	</pre>
 	</text>
 	""" % info
 	

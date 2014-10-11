@@ -53,7 +53,7 @@ def main_page(username):
 		if moviecounter == 1:
 			if re.search("^\s",line):
 				hobby = re.sub("\t|\n|  +","",line)
-				hobbies = hobbies.append(hobby)
+				hobbies.append(hobby)
 			else:
 				moviecounter = 0
 				
@@ -61,7 +61,7 @@ def main_page(username):
 			namecounter = 1
 		if re.search("favourite_movies",line):
 			moviecounter = 1	
-	hobbylist = '\n'.join(hobbies)
+	hobbylist = hobbies.join("\n")
 	movies = ""
 	info = {"1":username, "2":name, "3":movies, "4":hobbylist}
 	print """

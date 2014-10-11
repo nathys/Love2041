@@ -68,7 +68,7 @@ def main_page(username):
 	<text> 
 	
 	
-	<img src="./students/$(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo"
+	<img src="./students/%(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo"
 	
 	
 	Name:
@@ -78,11 +78,11 @@ def main_page(username):
 	
 	Favourite Movies:
 	
-	$(3)s
+	%(3)s
 	
 	Hobbies:
 	
-	$(4)s
+	%(4)s
 	</text>
 	""" % info
 	

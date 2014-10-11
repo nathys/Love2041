@@ -43,7 +43,7 @@ def main_page(username):
 	f = open(file,"r")
 	print """
 	<text> %s </text>
-	""" % f
+	""" % f.read()
 	
 
 

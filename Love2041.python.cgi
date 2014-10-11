@@ -92,10 +92,10 @@ def main_page(username):
 			showcounter = 1
 		if re.search("^favourite_books",line):
 			bookcounter = 1
-	movielist = "\n\t".join(movies)
-	hobbylist = "\n\t".join(hobbies)
-	showlist = "\n\t".join(shows)
-	booklist = "\n\t".join(books)
+	movielist = "\n\t\t".join(movies)
+	hobbylist = "\n\t\t".join(hobbies)
+	showlist = "\n\t\t".join(shows)
+	booklist = "\n\t\t".join(books)
 	info = {"1":username, "2":name, "3":movielist, "4":hobbylist, "5":showlist, "6":booklist}
 	print """
 	<text> 
@@ -107,24 +107,24 @@ def main_page(username):
 	
 	Name:
 	
-	%(2)s
+		%(2)s
 	
 	
 	Favourite Movies:
 	
-	%(3)s
+		%(3)s
 	
 	Hobbies:
 	
-	%(4)s
+		%(4)s
 	
 	Favourite Books:
 	
-	%(5)s
+		%(5)s
 	
 	Favourite Tv Shows:
 	
-	%(6)s
+		%(6)s
 	</pre>
 	</text>
 	""" % info

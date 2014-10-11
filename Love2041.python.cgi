@@ -138,7 +138,7 @@ def main_page(username):
 	"""
 	
 def get_profile():
-	number = random.randint(1,len(os.litdir('./')))
+	number = random.randint(1,len(os.listdir('./')))
 	counter = 0
 	direcs = os.listdir('./')
 	for line in direcs:

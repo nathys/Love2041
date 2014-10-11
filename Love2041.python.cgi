@@ -44,8 +44,13 @@ def main_page(username):
 	f = open(file,"r")
 	hobbies = []
 	movies = []
+	books = []
+	shows = []
 	namecounter = 0
 	moviecounter = 0
+	hobbycounter = 0
+	showcounter = 0
+	bookcounter = 0
 	name = ""
 	for line in f:
 		if namecounter == 1:
@@ -57,14 +62,40 @@ def main_page(username):
 				movies.append(movie)
 			else:
 				moviecounter = 0
-				
+		if hobbycounter == 1:
+			if re.search("^\s",line):
+				hobby = re.sub("\t|\n|  +","",line)
+				hobbies.append(hobby)
+			else:
+				hobbycounter = 0
+		if showcounter == 1:
+			if re.search("^\s",line):
+				show = re.sub("\t|\n|  +","",line)
+				shows.append(show)
+			else:
+				showcounter = 0
+		if bookcounter == 1:
+			if re.search("^\s",line):
+				book = re.sub("\t|\n|  +","",line)
+				books.append(book)
+			else:
+				bookcounter = 0
+		
 		if re.search("name:",line):
 			namecounter = 1
 		if re.search("favourite_movies",line):
-			moviecounter = 1	
+			moviecounter = 1
+		if re.search("favourite_hobbies",line):
+			hobbycounter = 1
+		if re.search("favourite_tv_shows",line):
+			showcounter = 1
+		if re.search("favourite_books",line):
+			bookcounter = 1
 	movielist = "\n\t".join(movies)
-	hobbylist = ""
-	info = {"1":username, "2":name, "3":movielist, "4":hobbylist}
+	hobbylist = "\n\t".join(hobbies)
+	showlist = "\n\t".join(shows)
+	booklist = "\n\t".join(books)
+	info = {"1":username, "2":name, "3":movielist, "4":hobbylist, "5":showlist, "6":booklist}
 	print """
 	<text> 
 	<pre>
@@ -85,6 +116,14 @@ def main_page(username):
 	Hobbies:
 	
 	%(4)s
+	
+	Favourite Books:
+	
+	%(5)s
+	
+	Favourite Tv Shows:
+	
+	%(6)s
 	</pre>
 	</text>
 	""" % info

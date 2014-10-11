@@ -85,7 +85,7 @@ def main_page(username):
 	Hobbies:\\n
 	
 	    %(4)s\\n
-	</text>\\n
+	</text>
 	""" % info
 	
 	

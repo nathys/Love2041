@@ -96,7 +96,7 @@ def main_page(username):
 	hobbylist = "\n\t\t".join(hobbies)
 	showlist = "\n\t\t".join(shows)
 	booklist = "\n\t\t".join(books)
-	info = {"1":username, "2":name, "3":movielist, "4":hobbylist, "5":showlist, "6":booklist}
+	info = {"1":username, "2":name, "3":movielist, "4":hobbylist, "5":booklist, "6":showlist}
 	print """
 	<text> 
 	<pre>

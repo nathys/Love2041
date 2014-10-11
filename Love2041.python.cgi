@@ -69,7 +69,7 @@ def main_page(username):
 	<text> 
 	
 	
-	<img src="./students/%(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo"
+	<img src="./students/%(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo">
 	
 	
 	Name:

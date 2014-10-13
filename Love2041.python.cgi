@@ -6,6 +6,10 @@ import cgi
 import cgitb
 import os
 import random
+import sqlite3
+
+conn = sqlite3.connect('Love2041.db')
+c = conn.cursor()
 
 
 
@@ -45,6 +49,12 @@ def main_page(username):
 	"""
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
+	c.excecute("SELECT * FROM users WHERE username = %s" % username)
+	genderbool = c.fetchone()
+	if genderbool == 0:
+		gender = male
+	else:
+		gender = female
 	hobbies = []
 	movies = []
 	bands = []
@@ -109,7 +119,7 @@ def main_page(username):
 	hobbylist = "\n\t\t".join(hobbies)
 	showlist = "\n\t\t".join(shows)
 	booklist = "\n\t\t".join(books)
-	info = {"1":username, "2":name, "3":movielist, "4":hobbylist, "5":booklist, "6":showlist, "7":bandlist}
+	info = {"1":username, "2":name, "3": gender, "4":movielist, "5":hobbylist, "6":booklist, "7":showlist, "8":bandlist}
 	print """
 	<div class="profile-container">
 	<pre>
@@ -122,26 +132,29 @@ def main_page(username):
 	
 		%(2)s
 	
-	
-	Favourite Movies:
-	
+	Gender:
+
 		%(3)s
-	
-	Hobbies:
+
+	Favourite Movies:
 	
 		%(4)s
 	
-	Favourite Books:
+	Hobbies:
 	
 		%(5)s
 	
-	Favourite Tv Shows:
+	Favourite Books:
 	
 		%(6)s
+	
+	Favourite Tv Shows:
+	
+		%(7)s
 		
 	Favourite Bands:
 	
-		%(7)s
+		%(8)s
 	</pre>
 	</div>
 	""" % info

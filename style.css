@@ -2,8 +2,8 @@ body{
   background-color: #D4ACF1;
 }
 .img-title{
-  position: relative;
-  top: 50%;
+  position: absolute;
+  margin-top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%,-50%);

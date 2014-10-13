@@ -15,7 +15,7 @@ import random
 
 
 
-def header(title,background):
+def header(title):
 	print "Content-type: text/html"
 	print
 	print """
@@ -25,7 +25,7 @@ def header(title,background):
 	<title>%(1)s</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	</head>
-	<body bgcolor="#%(2)s">
+	<body>
 	""" % {"1" : title, "2": background}
 
 

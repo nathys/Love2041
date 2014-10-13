@@ -40,7 +40,7 @@ def footer():
 def main_page(username):
 	print """
 	<div class="header-container">
-		<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi?%s" method="post">
+		<form class="form-title" action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi?%s" method="post">
 		username: <input type="text" name="username">
 		</form>
 		<img src="./images/logo.png" alt="Love2041" class="img-title">

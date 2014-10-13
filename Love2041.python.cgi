@@ -13,6 +13,23 @@ import random
 
 
 ##########
+#style
+##########
+def style():
+	print """
+	body{
+	  background-color: "#D4ACF1";
+	}
+	.img-title{
+	  position: absolute;
+	  margin-left: auto;
+	  margin-right: aut;
+	}
+	"""
+
+##########
+#code
+##########
 
 
 
@@ -175,6 +192,7 @@ def get_profile():
 	
 
 username = get_profile()
+sytle()
 header(title = "Love2041")
 main_page(username)
 footer()

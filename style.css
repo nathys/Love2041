@@ -21,11 +21,15 @@ div.header-container{
 }
 div.profile-container{
   position: relative;
-  margin-top: 2em;
+  margin-top: 0.5em;
   background-color: #BC85E3;
   border-radius: 12px;
   border: 2px solid;
   border-color: #9C5BCB;
   width: 40em;
   height 100em;
+}
+p.profile-text{
+  font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+  font-size: 12px;
 }

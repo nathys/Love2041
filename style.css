@@ -8,10 +8,10 @@ div.header-contatiner{
   position: relative;
   left: 0;
   right: 0;
+  width: 100%;
 }
 .img-title{
   position: absolute;
-  width: 100%;
   margin-right: -50%;
   transform: translate(-50%,-50%);
 }

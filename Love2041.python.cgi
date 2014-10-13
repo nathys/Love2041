@@ -192,7 +192,7 @@ def get_profile():
 	
 
 username = get_profile()
-sytle()
+style()
 header(title = "Love2041")
 main_page(username)
 footer()

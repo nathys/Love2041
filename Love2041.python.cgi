@@ -26,7 +26,6 @@ def header(title,background):
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	</head>
 	<body bgcolor="#%(2)s">
-
 	""" % {"1" : title, "2": background}
 
 

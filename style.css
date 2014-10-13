@@ -21,9 +21,9 @@ div.header-container{
 }
 div.profile-container{
   background-color:#F7B1DE;
-  border-raius: 12px;
+  border-radius: 12px;
   border-color: #DB5AAE;
   border: 2px solid;
-  width: 10em;
-  height 40em;
+  width: 40em;
+  height 100em;
 }

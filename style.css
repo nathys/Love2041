@@ -3,6 +3,7 @@ body{
 }
 
 div.img-container{
+  background-color: #33CCFF;
   height: 10em;
   position: relative;
 }

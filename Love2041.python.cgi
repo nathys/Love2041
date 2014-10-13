@@ -41,7 +41,7 @@ def main_page(username):
 	print """
 	<table width="100%" height="100%" algin="center" valign="center">
 		<tr><td>
-			<img src="./images/logo.png" style="vertical-align:middle; text-align:center" alt="Love2041">
+			<img class = "img-title" src="./images/logo.png" style="vertical-align:middle; text-align:center" alt="Love2041">
 		</tr></td>
 	</table>
 	"""

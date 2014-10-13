@@ -1,9 +1,14 @@
 body{
   background-color: #D4ACF1;
 }
+
+div.img-container{
+  height: 10em;
+  position: relative;
+}
 .img-title{
   position: absolute;
-  margin-top: 30px;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%,-50%);

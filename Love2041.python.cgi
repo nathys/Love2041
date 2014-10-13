@@ -49,12 +49,12 @@ def main_page(username):
 	"""
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
-	c.excecute("SELECT * FROM users WHERE username = %s" % username)
-	genderbool = c.fetchone()
-	if genderbool == 0:
-		gender = male
+	c.execute("SELECT gender FROM users WHERE username = '%s'" % username)
+	genderbool = c.fetchall()
+	if genderbool == "[(0,)]":
+		gender = "male"
 	else:
-		gender = female
+		gender = "female"
 	hobbies = []
 	movies = []
 	bands = []

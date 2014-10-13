@@ -42,7 +42,7 @@ def main_page(username):
 	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
 	</div>
-	""" % username
+	"""
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
 	hobbies = []

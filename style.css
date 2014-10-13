@@ -14,3 +14,8 @@ div.header-container{
   margin-right: -50%;
   transform: translate(-50%,-50%);
 }
+.form-title{
+  position: absolute;
+  left: 80%;
+  transform: translate(-50%,-50%);
+}

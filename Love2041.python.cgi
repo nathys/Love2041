@@ -39,7 +39,7 @@ def footer():
 
 def main_page(username):
 	print """
-	<div class="img-container">
+	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
 	</div>
 	"""

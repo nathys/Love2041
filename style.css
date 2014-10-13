@@ -161,7 +161,7 @@ button,
 input,
 select,
 textarea {
-  background: #fafafa;
+  background: #D4A1F6;
   color: #666;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -237,7 +237,7 @@ p:last-child {
 2.4 General
 --------------------------------------------------------------*/
 ::selection {
-  background-color: #444;
+  background-color: #D4A1F6;
   color: #fff;
 }
 

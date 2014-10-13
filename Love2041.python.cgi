@@ -26,7 +26,7 @@ def header(title):
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	</head>
 	<body>
-	""" % {"1" : title, "2": background}
+	""" % {"1" : title}
 
 
 
@@ -173,6 +173,6 @@ def get_profile():
 	
 
 username = get_profile()
-header(title = "Love2041",background = "D4A1F6")
+header(title = "Love2041")
 main_page(username)
 footer()

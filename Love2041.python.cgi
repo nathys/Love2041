@@ -16,6 +16,8 @@ import random
 #style
 ##########
 def style():
+	print "Content-type: text/html"
+	print
 	print """
 	body{
 	  background-color: "#D4ACF1";
@@ -35,8 +37,7 @@ def style():
 
 
 def header(title):
-	print "Content-type: text/html"
-	print
+
 	print """
 	<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 	<head>

@@ -9,7 +9,9 @@ div.header-container{
 }
 .img-title{
   position: absolute;
+  display: table-call;
   left: 50%;
+  top: 50%;
   vertical-align: middle;
   max-height: 100%;
   max-width: 100%;

@@ -111,7 +111,7 @@ def main_page(username):
 	booklist = "\n\t\t".join(books)
 	info = {"1":username, "2":name, "3":movielist, "4":hobbylist, "5":booklist, "6":showlist, "7":bandlist}
 	print """
-	<text> 
+	<div class="profile-container">
 	<pre>
 	
 	
@@ -143,7 +143,7 @@ def main_page(username):
 	
 		%(7)s
 	</pre>
-	</text>
+	</div>
 	""" % info
 	
 	print """

@@ -1,7 +1,8 @@
 body{
-  background: "#D4ACF1";
+  background-color: "#D4ACF1";
 }
 .img-title{
   position: absolute;
-  left: 50%;
+  margin-left: auto;
+  margin-right: aut;
 }

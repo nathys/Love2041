@@ -20,10 +20,12 @@ div.header-container{
   transform: translate(-50%,-50%);
 }
 div.profile-container{
-  background-color:#F7B1DE;
+  position: relative;
+  margin-top: 2em;
+  background-color: #F7B1DE;
   border-radius: 12px;
-  border-color: #DB5AAE;
   border: 2px solid;
+  border-color: #DB5AAE;
   width: 40em;
   height 100em;
 }

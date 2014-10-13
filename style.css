@@ -3,7 +3,7 @@ body{
 }
 
 div.header-container{
-  background-color: #CC33FF;
+  background-color: #9C5BCB;
   height: 12em;
   position: relative;
 }
@@ -18,4 +18,9 @@ div.header-container{
   position: absolute;
   left: 80%;
   transform: translate(-50%,-50%);
+}
+div.profile-container{
+  background-color:#F7B1DE;
+  border-raius: 12px;
+  border-color: #DB5AAE;
 }

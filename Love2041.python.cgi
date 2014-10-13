@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-
-
 import re
 import os
 import cgi
@@ -13,31 +11,13 @@ import random
 
 
 ##########
-#style
-##########
-def style():
-	print "Content-type: text/html"
-	print
-	print """
-	body{
-	  background-color: "#D4ACF1";
-	}
-	.img-title{
-	  position: absolute;
-	  margin-left: auto;
-	  margin-right: aut;
-	}
-	"""
-
-##########
-#code
-##########
 
 
 
 
 def header(title):
-
+	print "Content-type: text/html"
+	print
 	print """
 	<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 	<head>
@@ -59,11 +39,7 @@ def footer():
 
 def main_page(username):
 	print """
-	<table width="100%" height="100%" algin="center" valign="center">
-		<tr><td>
-			<img class = "img-title" src="./images/logo.png" style="vertical-align:middle; text-align:center" alt="Love2041">
-		</tr></td>
-	</table>
+	<img src="./images/logo.png" style="vertical-align:middle; text-align:center" alt="Love2041">
 	"""
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
@@ -193,7 +169,6 @@ def get_profile():
 	
 
 username = get_profile()
-style()
 header(title = "Love2041")
 main_page(username)
 footer()

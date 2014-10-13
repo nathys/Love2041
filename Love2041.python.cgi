@@ -39,7 +39,7 @@ def footer():
 
 def main_page(username):
 	print """
-	<img src="./images/logo.png" style="vertical-align:middle; text-align:center" alt="Love2041" class="img-title">
+	<img src="./images/logo.png" alt="Love2041" class="img-title">
 	"""
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")

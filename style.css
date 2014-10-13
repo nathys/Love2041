@@ -6,12 +6,12 @@ div.header-contatiner{
   background-color: #CC33FF;
   height: 12em;
   position: relative;
-  left: 0;
-  right: 0;
   width: 100%;
 }
 .img-title{
   position: absolute;
+  left: 50%;
+  top: 50%;
   margin-right: -50%;
   transform: translate(-50%,-50%);
 }

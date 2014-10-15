@@ -15,12 +15,12 @@ div.header-container{
   vertical-align: middle;
   max-height: 100%;
   max-width: 100%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,0%);
 }
 .form-title{
   position: absolute;
   left: 80%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,0%);
 }
 div.profile-container{
   position: relative;
@@ -59,10 +59,12 @@ div.thumbnail-profile{
   height: 20em;
 }
 
-pre.thumbnail{
+p.thumbnail{
   transform: translate(-50%,0%);
 }
-
+img.thumbnail{
+  transform: translate(-50%,0%);
+}
 #top1-left1{
   left: 0%;
   top: 0%;

@@ -209,7 +209,7 @@ if "pageusername" in form:
 	val = c.fetchone()
 	print "%s" % val
 	user = re.sub("\(u'|',|\)","",val[0])
-	print "%s" user
+	print "%s" % user
 	if user != "":
 		profile_page(form.getvalue("pageusername"))
 	else:

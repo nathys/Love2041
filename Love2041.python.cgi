@@ -60,7 +60,7 @@ def not_found_page():
 
 
 def profile_page(username):
-	file = "students/"+ username + "/profile.txt"
+	file = "students/%s/profile.txt" % username
 	f = open(file,"r")
 	c.execute("SELECT gender FROM users WHERE username = '%s'" % username)
 	gender = c.fetchone()

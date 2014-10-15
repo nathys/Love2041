@@ -46,7 +46,7 @@ div.thumbnail-container{
   width: 50em;
   height: 160em;
   left : 50%;
-  top: 12.5em;
+  top: -12.5em;
   transform: translate(-50%,-50%);
 }
 

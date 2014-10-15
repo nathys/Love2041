@@ -203,7 +203,7 @@ def main_page():
 		for j in range(1,3):
 			keys = {"1":i,"2":j}
 			print"""
-			<div class="thumbnail-profile" id="left%(1)s-top%(2)s">
+			<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 			""" % keys
 			print"""
 			<pre>

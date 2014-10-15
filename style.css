@@ -44,7 +44,7 @@ input.top-bar-button{
 div.thumbnail-container{
   position: relative;
   width: 50em;
-  height: 160em;
+  height: 110em;
   left : 50%;
   transform: translate(-50%,-0%);
 }
@@ -56,7 +56,7 @@ div.thumbnail-profile{
   border: 2px solid;
   border-color: #9C5BCB;
   width: 20em;
-  height: 30em;
+  height: 20em;
 }
 
 

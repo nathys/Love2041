@@ -198,22 +198,22 @@ def main_page():
 	<input type="submit" value="Home Page"/>
 	</p>
 	
-	<div class="thumbnail-profile" left:5px>
+	<div class="thumbnail-profile" left:5px top:5px>
 		<pre>
 		username:
 		person:
 		things:
 		examples"
-	`	</pre>
+		</pre>
 	</div>
 	
-	<div class="thumbnail-profile" left:35px>
+	<div class="thumbnail-profile" left:300px top:5px >
 		<pre>
 		username:
 		person:
 		things:
 		examples"
-	`	</pre>
+		</pre>
 	</div>
 	"""
 	

@@ -198,35 +198,23 @@ def main_page():
 	<input type="submit" value="Home Page"/>
 	</p>
 	<div class="thumbnail-container">
-		<div class="thumbnail-profile" id="top1-left1">
+	"""
+	for i in range(1,6):
+		for j in range(1,3):
+			keys = {"1":i,"2":j}
+			print"""
+			<div class="thumbnail-profile" id="left%(1)s-top%(2)s">
+			"""
+			print"""
 			<pre>
-			username:
-			person:
-			things:
-			examples"
+			example stuff
+			that means nothing
 			</pre>
-		</div>
-		
-		<div class="thumbnail-profile" id="top1-left2" >
-			<pre>
-			username:
-			person:
-			things:
-			examples"
-			</pre>
-		</div>
-		
-		<div class="thumbnail-profile" id="top2-left2" >
-			<pre>
-			username:
-			person:
-			things:
-			examples"
-			</pre>
-		</div>
+			</div>
+			"""
+	print """
 	</div>
 	"""
-	
 	
 
 username = get_profile()

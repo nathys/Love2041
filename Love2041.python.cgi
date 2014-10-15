@@ -36,7 +36,7 @@ def header(title):
 	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
 		<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
-		<input class="top-bar-button" left="90%" top="40%" type="submit" value="Home Page"/>
+		<input class="top-bar-button" id="button1" type="submit" value="Home Page"/>
 		</form>
 	</div>
 	"""

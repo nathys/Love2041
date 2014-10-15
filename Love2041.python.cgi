@@ -204,7 +204,7 @@ def main_page():
 				""" % keys
 				print"""
 				<pre>
-				<img src="%(1)s" alt="profile of %(2)">
+				<img src="%(1)s" alt="profile of %(2)s">
 				
 				Username: %(3)s
 				</pre>

@@ -198,12 +198,15 @@ def main_page():
 			for non_san in user:
 				name = re.sub("\(u'|',\)","",non_san)
 				file = "./students/%s/photo00.jpg" % name
+				data = {"1": file, "2" : name, "3": name}
 				print"""
 				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 				""" % keys
 				print"""
 				<pre>
-				%s
+				<img src="%(1)s" alt="profile of %(2)">
+				
+				Username: %(3)s
 				</pre>
 				</div>
 				""" % data

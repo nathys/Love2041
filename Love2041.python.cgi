@@ -206,7 +206,8 @@ header(title = "Love2041")
 form = cgi.FieldStorage()
 if "pageusername" in form:
 	c.execute('SELECT 1 FROM users WHERE username="%s"' % form.getvalue("pageusername"))
-	val = re.sub("\(u'|',|\)","",c.fetchone())
+	val = c.fetchone()
+	user = re.sub("\(u'|',|\)","",val[0])
 	if val != "":
 		profile_page(form.getvalue("pageusername"))
 	else:

@@ -179,39 +179,34 @@ def profile_page(username):
 	"""
 	
 def get_profile():
-	number = random.randint(1,len(os.listdir('./students/')))
-	counter = 0
-	direcs = os.listdir('./students/')
-	for line in direcs:
-		if counter >= number:
-			username = line
-			break
-		else:
-			counter+=1
-	return username
+	c.execute("SELECT username FROM users ORDER BY RANDOM() LIMIT 10")
+	names = c.fetchall()
+	return names
+	
+	
 	
 def main_page():
 	print """
 	<p class="profile-text">
-	<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
-	<input type="text" name="pageusername" value="Username">
-	<input type="submit" value="Home Page"/>
 	</p>
 	<div class="thumbnail-container">
 	"""
 	for i in range(1,6):
 		for j in range(1,3):
 			keys = {"1":i,"2":j}
-			print"""
-			<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
-			""" % keys
-			print"""
-			<pre>
-			example stuff
-			that means nothing
-			</pre>
-			</div>
-			"""
+			user = get_profile()
+			for non_san in user:
+				name = re.sub("\(u'|',\)","",non_san)
+				file = "./students/%s/photo00.jpg" % name
+				print"""
+				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
+				""" % keys
+				print"""
+				<pre>
+				%s
+				</pre>
+				</div>
+				""" % data
 	print """
 	</div>
 	"""
@@ -220,9 +215,12 @@ def main_page():
 username = get_profile()
 header(title = "Love2041")
 form = cgi.FieldStorage()
-if "pageusername" in form:
-		profile_page(form.getvalue("pageusername"))
-else:
-	main_page()
+#if "login" not in form:
+#	login_page()
+#else:
+	if "pageusername" in form:
+			profile_page(form.getvalue("pageusername"))
+	else:
+		main_page()
 	
 footer()

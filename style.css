@@ -45,18 +45,18 @@ div.thumbnail-container{
   position: relative;
   width: 50em;
   height: 160em;
+  left : 50%;
+  transform: translate(-50%,-50%);
 }
 
 div.thumbnail-profile{
   position: absolute;
-  left : 50%;
   background-color: #BC85E3;
   border-radius: 12px;
   border: 2px solid;
   border-color: #9C5BCB;
   width: 20em;
   height: 30em;
-  transform: translate(-50%,-50%);
 }
 
 

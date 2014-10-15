@@ -197,32 +197,33 @@ def main_page():
 	<input type="text" name="pageusername" value="Username">
 	<input type="submit" value="Home Page"/>
 	</p>
-	
-	<div class="thumbnail-profile" left:0% top:0%>
-		<pre>
-		username:
-		person:
-		things:
-		examples"
-		</pre>
-	</div>
-	
-	<div class="thumbnail-profile" left:50% top:0% >
-		<pre>
-		username:
-		person:
-		things:
-		examples"
-		</pre>
-	</div>
-	
-	<div class="thumbnail-profile" left:50% top:50% >
-		<pre>
-		username:
-		person:
-		things:
-		examples"
-		</pre>
+	<div class="thumbnail-container>
+		<div class="thumbnail-profile" left:0% top:0%>
+			<pre>
+			username:
+			person:
+			things:
+			examples"
+			</pre>
+		</div>
+		
+		<div class="thumbnail-profile" left:50% top:0% >
+			<pre>
+			username:
+			person:
+			things:
+			examples"
+			</pre>
+		</div>
+		
+		<div class="thumbnail-profile" left:50% top:50% >
+			<pre>
+			username:
+			person:
+			things:
+			examples"
+			</pre>
+		</div>
 	</div>
 	"""
 	

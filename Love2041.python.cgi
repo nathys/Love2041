@@ -211,7 +211,7 @@ def main_page():
 			that means nothing
 			</pre>
 			</div>
-			"""
+			""" % keys
 	print """
 	</div>
 	"""

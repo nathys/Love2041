@@ -204,14 +204,14 @@ def main_page():
 			keys = {"1":i,"2":j}
 			print"""
 			<div class="thumbnail-profile" id="left%(1)s-top%(2)s">
-			"""
+			""" % keys
 			print"""
 			<pre>
 			example stuff
 			that means nothing
 			</pre>
 			</div>
-			""" % keys
+			"""
 	print """
 	</div>
 	"""

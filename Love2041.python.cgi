@@ -51,6 +51,11 @@ def main_page(username):
 	f = open(file,"r")
 	c.execute("SELECT gender FROM users WHERE username = '%s'" % username)
 	genderbool = c.fetchall()
+	print """
+	<pre>
+	thing: %s
+	</pre>
+	""" % genderbool
 	if genderbool == "[(0,)]":
 		gender = "male"
 	else:

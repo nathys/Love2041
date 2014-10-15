@@ -23,15 +23,15 @@ for line in direcs:
 			password = words
 			flag = 0;
 		if genderflag == 1:
-			if re.search("female",words):
+			if re.search("^\s*female",words):
 				gender = 1
 			else:
 				gender = 0
 			genderflag = 0
 
-		if re.search("\s*password:",words):
+		if re.search("^\s*password:",words):
 			flag = 1;
-		if re.search("\s*gender:",words):
+		if re.search("^\s*gender:",words):
 			genderflag = 1
 
 	info = {"1": username,"2":password, "3": gender}

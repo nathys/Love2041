@@ -208,7 +208,7 @@ if "pageusername" in form:
 	c.execute('SELECT 1 FROM users WHERE username="%s"' % form.getvalue("pageusername"))
 	val = c.fetchone()
 	user = re.sub("\(u'|',|\)","",val[0])
-	if val != "":
+	if user != "":
 		profile_page(form.getvalue("pageusername"))
 	else:
 		not_found_page()

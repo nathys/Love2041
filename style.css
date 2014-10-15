@@ -36,3 +36,8 @@ p.profile-text{
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
   font-size: 12px;
 }
+
+input.top-bar-button{
+    position: absolute;
+    
+}

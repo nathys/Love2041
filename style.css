@@ -43,7 +43,7 @@ input.top-bar-button{
 }
 
 div.thumbnail-profile{
-  position: relative;
+  position: fixed;
   margin-top: 0.5em;
   background-color: #BC85E3;
   border-radius: 12px;

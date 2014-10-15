@@ -195,10 +195,10 @@ def main_page():
 		for j in range(1,3):
 			keys = {"1":i,"2":j}
 			user = get_profile()
-			for non_san in user:
-				name = re.sub("\(u'|',\)","",non_san)
+			for name in user:
 				file = "./students/%s/photo00.jpg" % name
-				data = {"1": file, "2" : name, "3": name}
+				name_final = "%s" % name
+				data = {"1": file, "2" : name_final, "3": name_final}
 				print"""
 				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 				""" % keys

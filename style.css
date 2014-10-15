@@ -41,7 +41,21 @@ input.top-bar-button{
     position: absolute;
     
 }
+
+div.thumbnail-profile{
+  position: relative;
+  margin-top: 0.5em;
+  background-color: #BC85E3;
+  border-radius: 12px;
+  border: 2px solid;
+  border-color: #9C5BCB;
+  width: 20em;
+  height: 60em;
+}
+
 #button1 {
   left: 90%;
   top: 50%;
 }
+
+

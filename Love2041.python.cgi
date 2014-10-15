@@ -31,17 +31,7 @@ def header(title):
 	</head>
 	<body>
 	""" % {"1" : title}
-
-
-
-def footer():
-	print """
-	</body>
-	</html>
-	"""
-
-
-def profile_page(username):
+	
 	print """
 	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
@@ -50,6 +40,26 @@ def profile_page(username):
 		</form>
 	</div>
 	"""
+
+
+
+def footer():
+	print """
+	</body>
+	</html>
+	"""
+	
+def not_found_page():
+	print """
+	<p class="profile-text">
+	<pre>
+	This page doesn't exist, please go back to the home page
+	</pre>
+	</p>
+	"""
+
+
+def profile_page(username):
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
 	c.execute("SELECT gender FROM users WHERE username = '%s'" % username)
@@ -182,13 +192,11 @@ def get_profile():
 	
 def main_page():
 	print """
-	<body>
 	<p class="profile-text">
 	<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
 	<input type="text" name="pageusername" value="Username">
 	<input type="submit" value="Home Page"/>
 	</p>
-	</body>
 	"""
 	
 	

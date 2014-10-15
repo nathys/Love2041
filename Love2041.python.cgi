@@ -41,10 +41,13 @@ def footer():
 	"""
 
 
-def main_page(username):
+def profile_page(username):
 	print """
 	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
+		<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
+		<input class="top-bar-button" left="90%" top="40%" type="submit" value="Home Page"/>
+		</form>
 	</div>
 	"""
 	file = "students/"+ username + "/profile.txt"
@@ -118,6 +121,7 @@ def main_page(username):
 	info = {"1":username, "2":name, "3": gender[0], "4":movielist, "5":hobbylist, "6":booklist, "7":showlist, "8":bandlist}
 	print """
 	<div class="profile-container">
+	<p class="profile-text">
 	<pre>
 	
 	
@@ -152,14 +156,15 @@ def main_page(username):
 	
 		%(8)s
 	</pre>
+	</p>
 	</div>
 	""" % info
 	
 	print """
 	<pre>
 	
-	<form action="" method="post">
-	<input type="submit" value="Next Profile"/>
+	<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
+	<input type="submit" value="Home Page"/>
 	</pre>
 	"""
 	
@@ -175,11 +180,25 @@ def get_profile():
 			counter+=1
 	return username
 	
-	
+def main_page():
+	print """
+	<body>
+	<p class="profile-text">
+	<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
+	<input type="text" name="pageusername" value="Username">
+	<input type="submit" value="Home Page"/>
+	</p>
+	</body>
+	"""
 	
 	
 
 username = get_profile()
 header(title = "Love2041")
-main_page(username)
+form = cgi.FieldStorage()
+if "pageusername" in form:
+	profile_page(form.getvalue("pageusername")
+else:
+	main_page()
+	
 footer()

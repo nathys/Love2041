@@ -57,6 +57,24 @@ div.thumbnail-profile{
   height: 30em;
 }
 
+
+#top1-left1{
+  left: 0%;
+  top: 0%;
+}
+#top1-left2{
+  left: 50%;
+  top: 0%;
+}
+#top2-left1{
+  left: 20%;
+  top: 0%;
+}
+#top2-left2{
+  left: 20%;
+  top: 50%;
+}
+
 #button1 {
   left: 90%;
   top: 50%;

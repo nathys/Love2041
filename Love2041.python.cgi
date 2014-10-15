@@ -196,9 +196,9 @@ def main_page():
 			keys = {"1":i,"2":j}
 			user = get_profile()
 			for name in user:
+				username = "".join(name)
 				file = "./students/%s/photo00.jpg" % name
-				name_final = "%s" % name
-				data = {"1": file, "2" : name_final, "3": name_final}
+				data = {"1": file, "2" : username, "3": username}
 				print"""
 				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 				""" % keys

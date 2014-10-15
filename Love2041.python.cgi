@@ -198,7 +198,7 @@ def main_page():
 	<input type="submit" value="Home Page"/>
 	</p>
 	
-	<div class="thumbnail-profile" left:5px top:5px>
+	<div class="thumbnail-profile" left:0% top:0%>
 		<pre>
 		username:
 		person:
@@ -207,7 +207,16 @@ def main_page():
 		</pre>
 	</div>
 	
-	<div class="thumbnail-profile" left:300px top:5px >
+	<div class="thumbnail-profile" left:50% top:0% >
+		<pre>
+		username:
+		person:
+		things:
+		examples"
+		</pre>
+	</div>
+	
+	<div class="thumbnail-profile" left:50% top:50% >
 		<pre>
 		username:
 		person:

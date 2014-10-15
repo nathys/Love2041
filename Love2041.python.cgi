@@ -218,12 +218,9 @@ def main_page():
 username = get_profile()
 header(title = "Love2041")
 form = cgi.FieldStorage()
-#if "login" not in form:
-#	login_page()
-#else:
-	if "pageusername" in form:
-			profile_page(form.getvalue("pageusername"))
-	else:
-		main_page()
+if "pageusername" in form:
+	profile_page(form.getvalue("pageusername"))
+else:
+	main_page()
 	
 footer()

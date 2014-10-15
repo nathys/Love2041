@@ -7,7 +7,7 @@ c = conn.cursor()
 
 # Create table
 c.execute('''CREATE TABLE users
-             (username TEXT, password TEXT, gender BOOLEAN)''')
+             (username TEXT, password TEXT, gender TEXT)''')
 
 direcs = os.listdir('./students/')
 idnum  = 0
@@ -24,9 +24,9 @@ for line in direcs:
 			flag = 0;
 		if genderflag == 1:
 			if re.search("^\s*female",words):
-				gender = 1
+				gender = "female"
 			else:
-				gender = 0
+				gender = "male"
 			genderflag = 0
 
 		if re.search("^\s*password:",words):

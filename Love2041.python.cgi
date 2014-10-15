@@ -50,16 +50,7 @@ def main_page(username):
 	file = "students/"+ username + "/profile.txt"
 	f = open(file,"r")
 	c.execute("SELECT gender FROM users WHERE username = '%s'" % username)
-	genderbool = c.fetchall()
-	print """
-	<pre>
-	thing: %s
-	</pre>
-	""" % genderbool
-	if genderbool == "[(0,)]":
-		gender = "male"
-	else:
-		gender = "female"
+	gender = c.fetchone()
 	hobbies = []
 	movies = []
 	bands = []
@@ -124,7 +115,7 @@ def main_page(username):
 	hobbylist = "\n\t\t".join(hobbies)
 	showlist = "\n\t\t".join(shows)
 	booklist = "\n\t\t".join(books)
-	info = {"1":username, "2":name, "3": gender, "4":movielist, "5":hobbylist, "6":booklist, "7":showlist, "8":bandlist}
+	info = {"1":username, "2":name, "3": gender[0], "4":movielist, "5":hobbylist, "6":booklist, "7":showlist, "8":bandlist}
 	print """
 	<div class="profile-container">
 	<pre>

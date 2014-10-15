@@ -59,6 +59,9 @@ div.thumbnail-profile{
   height: 20em;
 }
 
+pre.thumbnail{
+  transform: translate(-50%,0%);
+}
 
 #top1-left1{
   left: 0%;

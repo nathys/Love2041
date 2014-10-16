@@ -202,16 +202,14 @@ def main_page():
 				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 				""" % keys
 				print"""
-				<pre>
+				<p class="thumbnail-img">
 				<img src="%(1)s" alt="profile of %(2)s"/>
-				<p>
 				Username: %(3)s
-				</p>
 				<form action="" method="post">
 				<input type="hidden" name="pageusername" value="%(3)s"/>
 				<input type="submit" value="View Profile"/>
 				</form>
-				</pre>
+				</p>
 				</div>
 				""" % data
 	print """

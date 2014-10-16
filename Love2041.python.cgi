@@ -58,7 +58,6 @@ def not_found_page():
 	</p>
 	"""
 
-
 def profile_page(username):
 	file = "students/%s/profile.txt" % username
 	f = open(file,"r")

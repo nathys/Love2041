@@ -202,9 +202,9 @@ def main_page():
 				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 				""" % keys
 				print"""
-				<pre class="thumbnail">
-				<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
-				<p class="thumbnail-text">
+				<pre>
+				<img src="%(1)s" alt="profile of %(2)s"/>
+				<p>
 				Username: %(3)s
 				</p>
 				<form action="" method="post">

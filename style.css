@@ -19,7 +19,7 @@ div.header-container{
 .form-title{
   position: absolute;
   left: 80%;
-  transform: translate(-50%,0%);
+  margin: 0 auto;
 }
 div.profile-container{
   position: relative;
@@ -45,7 +45,7 @@ div.thumbnail-container{
   width: 50em;
   height: 110em;
   left : 50%;
-  transform: translate(-50%,-0%);
+  margin: 0 auto;
 }
 
 div.thumbnail-profile{
@@ -58,12 +58,7 @@ div.thumbnail-profile{
   height: 20em;
 }
 
-p.thumbnail-text{
-  transform: translate(-50%,0%);
-}
-img.thumbnail-img{
-  transform: translate(-50%,0%);
-}
+
 #top1-left1{
   left: 0%;
   top: 0%;

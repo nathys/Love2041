@@ -30,6 +30,7 @@ div.profile-container{
   border-color: #9C5BCB;
   width: 40em;
   height 100em;
+  margin: 0 auto;
 }
 p.profile-text{
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
@@ -56,6 +57,10 @@ div.thumbnail-profile{
   border-color: #9C5BCB;
   width: 20em;
   height: 20em;
+}
+
+p.thumbnail-img{
+  text-align: center;
 }
 
 

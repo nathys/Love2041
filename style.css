@@ -30,7 +30,6 @@ div.profile-container{
   width: 40em;
   height 100em;
   margin: 0.5em auto;
-  transform: translate(0%,-0.5em);
 }
 p.profile-text{
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
@@ -62,6 +61,18 @@ p.thumbnail-text{
   text-align: center;
 }
 
+img.thumbnail-img{
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+
+form.profile-button{
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform(-50%,0%)
+}
 
 #top1-left1{
   left: 0%;

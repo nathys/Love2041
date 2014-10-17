@@ -1,5 +1,10 @@
 #!/usr/bin/python
 
+import sqlite3
+
+conn = sqlite3.connect('Love2041.db')
+c = conn.cursor()
+
 def get_profile():
 	c.execute("SELECT username FROM users ORDER BY RANDOM() LIMIT 10")
 	names = c.fetchall()

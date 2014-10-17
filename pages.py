@@ -1,5 +1,11 @@
 #!/usr/bin/python
 
+import sqlite3
+import mainFunctions
+
+conn = sqlite3.connect('Love2041.db')
+c = conn.cursor()
+
 
 def main_page():
 	print """
@@ -10,7 +16,7 @@ def main_page():
 	for i in range(1,6):
 		for j in range(1,3):
 			keys = {"1":i,"2":j}
-			user = get_profile()
+			user = mainFunctions.get_profile()
 			for name in user:
 				username = "".join(name)
 				file = "./students/%s/photo00.jpg" % name

@@ -27,7 +27,7 @@ def main_page():
 				file = "./students/%s/photo00.jpg" % name
 				data = {"1": file, "2" : username, "3": username}
 				print"""
-				<div id="top%(1)s-left%(2)s">
+				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 				""" % keys
 				print"""
 				<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>

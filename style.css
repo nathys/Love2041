@@ -41,6 +41,7 @@ input.top-bar-button{
     
 }
 div.thumbnail-container{
+  margin-top: 1em;
   position: relative;
   width: 70em;
   height: 150em;
@@ -71,7 +72,7 @@ form.profile-button{
   position: absolute;
   left: 50%;
   top: 80%;
-  transform(-50%,0%)
+  transform: translate(-50%,0%);
 }
 
 #top1-left1{

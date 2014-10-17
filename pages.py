@@ -18,10 +18,10 @@ def main_page():
 	</p>
 	<div class="thumbnail-container">
 	"""
+	user = mainFunctions.get_profile()
 	for i in range(1,6):
 		for j in range(1,3):
 			keys = {"1":i,"2":j}
-			user = mainFunctions.get_profile()
 			for name in user:
 				username = "".join(name)
 				file = "./students/%s/photo00.jpg" % name

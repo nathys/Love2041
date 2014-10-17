@@ -19,25 +19,27 @@ def main_page():
 	<div class="thumbnail-container">
 	"""
 	user = mainFunctions.get_profile()
+	counter = 0
 	for i in range(1,6):
 		for j in range(1,3):
+			name = user[counter]
 			keys = {"1":i,"2":j}
-			for name in user:
-				username = "".join(name)
-				file = "./students/%s/photo00.jpg" % name
-				data = {"1": file, "2" : username, "3": username}
-				print"""
-				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
-				""" % keys
-				print"""
-				<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
-				Username: %(3)s
-				<form action="" method="post">
-				<input type="hidden" name="pageusername" value="%(3)s"/>
-				<input type="submit" value="View Profile"/>
-				</form>
-				</div>
-				""" % data
+			username = "".join(name)
+			file = "./students/%s/photo00.jpg" % name
+			data = {"1": file, "2" : username, "3": username}
+			print"""
+			<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
+			""" % keys
+			print"""
+			<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
+			Username: %(3)s
+			<form action="" method="post">
+			<input type="hidden" name="pageusername" value="%(3)s"/>
+			<input type="submit" value="View Profile"/>
+			</form>
+			</div>
+			""" % data
+			counter += 1
 	print """
 	</div>
 	"""

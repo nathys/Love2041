@@ -117,6 +117,7 @@ def profile_page(username):
 	info = {"1":username, "2":name, "3": gender[0], "4":movielist, "5":hobbylist, "6":booklist, "7":showlist, "8":bandlist}
 	print """
 	<div class="profile-container">
+	<pre>
 	<p class="profile-text">
 	
 	
@@ -151,6 +152,7 @@ def profile_page(username):
 	
 		%(8)s
 	</p>
+	</pre>
 	</div>
 	""" % info
 	

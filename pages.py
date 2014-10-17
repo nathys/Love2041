@@ -118,7 +118,6 @@ def profile_page(username):
 	print """
 	<div class="profile-container">
 	<p class="profile-text">
-	<pre>
 	
 	
 	<img src="./students/%(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo">
@@ -151,7 +150,6 @@ def profile_page(username):
 	Favourite Bands:
 	
 		%(8)s
-	</pre>
 	</p>
 	</div>
 	""" % info

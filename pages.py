@@ -28,7 +28,6 @@ def main_page():
 				data = {"1": file, "2" : username, "3": username}
 				print"""
 				<div id="top%(1)s-left%(2)s">
-				<p class="thumbnail-text">
 				""" % keys
 				print"""
 				<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
@@ -37,7 +36,6 @@ def main_page():
 				<input type="hidden" name="pageusername" value="%(3)s"/>
 				<input type="submit" value="View Profile"/>
 				</form>
-				</p>
 				</div>
 				""" % data
 	print """

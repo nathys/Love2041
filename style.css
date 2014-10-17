@@ -44,7 +44,7 @@ div.thumbnail-container{
   margin-top: 1em;
   position: relative;
   width: 70em;
-  height: 300em;
+  height: 150em;
   margin: 0 auto;
 }
 
@@ -62,18 +62,6 @@ p.thumbnail-text{
   text-align: center;
 }
 
-img.thumbnail-img{
-  position: absolute;
-  left: 10%;
-  top: 5%;
-}
-
-form.profile-button{
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  transform: translate(-50%,0%);
-}
 
 #top1-left1{
   left: 0%;

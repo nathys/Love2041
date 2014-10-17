@@ -27,7 +27,6 @@ def main_page():
 				file = "./students/%s/photo00.jpg" % name
 				data = {"1": file, "2" : username, "3": username}
 				print"""
-				<pre>
 				<p class="thumbnail-text">
 				<div id="top%(1)s-left%(2)s">
 				""" % keys
@@ -39,7 +38,6 @@ def main_page():
 				<input type="submit" value="View Profile"/>
 				</form>
 				</p>
-				</pre>
 				</div>
 				""" % data
 	print """

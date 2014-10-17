@@ -15,11 +15,6 @@ c = conn.cursor()
 
 ##########
 
-	
-	
-	
-
-
 mainFunctions.header(title = "Love2041")
 form = cgi.FieldStorage()
 if "pageusername" in form:

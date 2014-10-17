@@ -1,5 +1,10 @@
 #!/usr/bin/python
-
+import re
+import os
+import cgi
+import cgitb
+import os
+import random
 import sqlite3
 import mainFunctions
 

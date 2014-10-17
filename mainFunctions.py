@@ -1,5 +1,12 @@
 #!/usr/bin/python
 
+import re
+import os
+import cgi
+import cgitb
+import os
+import random
+import pages
 import sqlite3
 
 conn = sqlite3.connect('Love2041.db')

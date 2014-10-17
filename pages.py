@@ -22,19 +22,17 @@ def main_page():
 				file = "./students/%s/photo00.jpg" % name
 				data = {"1": file, "2" : username, "3": username}
 				print"""
-				<p class="thumbnail-img">
+				<p class="thumbnail-text">
 				<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 				""" % keys
 				print"""
-				<pre class="thumbnail">
-				<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
+				<img src="%(1)s" alt="profile of %(2)s"/>
 				Username: %(3)s
 				<form action="" method="post">
 				<input type="hidden" name="pageusername" value="%(3)s"/>
 				<input type="submit" value="View Profile"/>
 				</form>
 				</p>
-				</pre>
 				</div>
 				""" % data
 	print """

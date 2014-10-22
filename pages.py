@@ -122,7 +122,7 @@ def profile_page(username):
 	print """
 	<div class="profile-container">
 	<pre>
-	<p class="profile-text">
+	<p>
 	
 	
 	<img src="./students/%(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo">

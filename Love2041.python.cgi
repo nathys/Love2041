@@ -29,7 +29,7 @@ else:
 mainFunctions.header(title = "Love2041")
 if not "login" in form:
 	pages.login_page(loginstatus = login)
-elif "%s" % form.getvalue("login") != "1":
+elif "%s" % form.getvalue("login") != "1" or login != 1:
 	pages.login_page(loginstatus = login)
 else:
 	if "pageusername" in form:

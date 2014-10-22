@@ -28,7 +28,7 @@ if "username" in form and "password" in form:
 
 mainFunctions.header(title = "Love2041")
 if not "login" in form:
-	pages.login_page()
+	pages.login_page(login)
 else:	
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))

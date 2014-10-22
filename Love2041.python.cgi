@@ -25,7 +25,7 @@ if "username" in form and "password" in form:
 		if form.getvalue("password") == matchedString:
 			login = 1
 		else:
-			login = 0
+			login = 2
 
 mainFunctions.header(title = "Love2041")
 if not "login" in form:

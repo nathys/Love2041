@@ -16,8 +16,9 @@ c = conn.cursor()
 ##########
 form = cgi.FieldStorage()
 
-if "username" in form and "password" in form:
-	if not "login" in form:
+
+if not "login" in form:
+	if "username" in form and "password" in form:
 		login = 0;
 		c.execute("Select password FROM users WHERE username = '%s'" % form.getvalue("username"))
 		matched = c.fetchone()
@@ -25,6 +26,8 @@ if "username" in form and "password" in form:
 			login = 1
 		else:
 			login = 2
+else:
+	login = "".join(form.getvalue("login"))
 
 mainFunctions.header(title = "Love2041")
 if not "login" in form:

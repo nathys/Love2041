@@ -31,7 +31,7 @@ div.profile-container{
   height 100em;
   margin: 0.5em auto;
 }
-p.profile-text{
+.profile-text{
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
   font-size: 12px;
 }

@@ -113,11 +113,11 @@ def profile_page(username):
 			showcounter = 1
 		if re.search("^favourite_books",line):
 			bookcounter = 1
-	movielist = "\n<li class=\"profile-list\">".join(movies)
-	bandlist = "\n<li class=\"profile-list\">".join(bands)
-	hobbylist = "\n<li class=\"profile-list\">".join(hobbies)
-	showlist = "\n<li class=\"profile-list\">".join(shows)
-	booklist = "\n<li class=\"profile-list\">".join(books)
+	movielist = "</li>\n<li class=\"profile-list\">".join(movies)
+	bandlist = "</li>\n<li class=\"profile-list\">".join(bands)
+	hobbylist = "</li>\n<li class=\"profile-list\">".join(hobbies)
+	showlist = "</li>\n<li class=\"profile-list\">".join(shows)
+	booklist = "</li>\n<li class=\"profile-list\">".join(books)
 	info = {"1":username, "2":name, "3": gender[0], "4":movielist, "5":hobbylist, "6":booklist, "7":showlist, "8":bandlist}
 	print """
 	<div class="profile-container">

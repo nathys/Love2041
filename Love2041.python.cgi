@@ -14,6 +14,7 @@ conn = sqlite3.connect('Love2041.db')
 c = conn.cursor()
 
 ##########
+form = cgi.FieldStorage()
 
 if "username" in form and "password" in form:
 	login = 0;
@@ -26,7 +27,6 @@ if "username" in form and "password" in form:
 		login = 0
 
 mainFunctions.header(title = "Love2041")
-form = cgi.FieldStorage()
 if not "login" in form:
 	pages.login_page()
 else:	

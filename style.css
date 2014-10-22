@@ -66,6 +66,11 @@ li.profile-list {
   margin-left: 2em;
 }
 
+.failed-login {
+  font-size: 28px;
+  color: #FF3C19;
+}
+
 #top1-left1{
   left: 0%;
   top: 0%;

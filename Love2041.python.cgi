@@ -32,8 +32,6 @@ if not "login" in form:
 	pages.login_page(loginstatus = login)
 elif "%s" % form.getvalue("login") != "1" or login != 1:
 	pages.login_page(loginstatus = login)
-	print "%s" % form.getvalue("password")
-	print "%s" % matched
 else:
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))

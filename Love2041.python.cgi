@@ -17,14 +17,17 @@ c = conn.cursor()
 form = cgi.FieldStorage()
 
 if "username" in form and "password" in form:
-	login = 0;
-	c.execute("Select password FROM users WHERE username = %s" % form.getvalue("username"))
-	matched = c.fetchone()
-	matchedString = "".join(matched)
-	if form.getvalue("password") == matchedString:
-		login = 1
+	if "login" in form:
+		login = form.getvalue("login")
 	else:
-		login = 0
+		login = 0;
+		c.execute("Select password FROM users WHERE username = %s" % form.getvalue("username"))
+		matched = c.fetchone()
+		matchedString = "".join(matched)
+		if form.getvalue("password") == matchedString:
+			login = 1
+		else:
+			login = 0
 
 mainFunctions.header(title = "Love2041")
 if not "login" in form:

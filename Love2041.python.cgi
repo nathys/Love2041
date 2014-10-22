@@ -17,9 +17,7 @@ c = conn.cursor()
 form = cgi.FieldStorage()
 
 if "username" in form and "password" in form:
-	if "login" in form:
-		login = form.getvalue("login")
-	else:
+	if not "login" in form:
 		login = 0;
 		c.execute("Select password FROM users WHERE username = %s" % form.getvalue("username"))
 		matched = c.fetchone()

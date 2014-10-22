@@ -19,6 +19,7 @@ mainFunctions.header(title = "Love2041")
 form = cgi.FieldStorage()
 if not "login" in form:
 	pages.login_page()
+else:	
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))
 	else:

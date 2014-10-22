@@ -9,7 +9,7 @@ import sqlite3
 import mainFunctions
 import jinja2
 
-templateLoader = jinja2.FileSystemLoader(serachpath="./templates")
+templateLoader = jinja2.FileSystemLoader(searchpath="./templates")
 templateEnv = jinja2.Environment(loader=templateLoader)
 
 conn = sqlite3.connect('Love2041.db')

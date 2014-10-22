@@ -20,7 +20,7 @@ if "username" in form and "password" in form:
 	c.execute("Select password FROM users WHERE username = '%s'" % form.getvalue("username"))
 	matched = c.fetchone()
 	print form.getvalue("password")
-	print "".join(matched)
+	print matched
 	if form.getvalue("password") == "".join(matched):
 		login = 1
 	else:

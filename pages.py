@@ -174,8 +174,9 @@ def profile_page(username):
 	"""
 	
 	
-def login_page():
+def login_page(loginstatus):
 	template = templateEnv.get_template("login.html")
-	output = template.render()
+	info = {"login": loginstatus}
+	output = template.render(info)
 	print output
 	

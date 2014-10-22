@@ -19,7 +19,6 @@ form = cgi.FieldStorage()
 if "username" in form and "password" in form:
 	c.execute("Select password FROM users WHERE username = '%s'" % form.getvalue("username"))
 	matched = c.fetchone()
-	print "%s" % form.getvalue("password")
 	if form.getvalue("password") == "".join(matched):
 		login = 1
 	else:
@@ -32,6 +31,8 @@ if not "login" in form:
 	pages.login_page(loginstatus = login)
 elif "%s" % form.getvalue("login") != "1" or login != 1:
 	pages.login_page(loginstatus = login)
+	print "%s" % form.getvalue("password")
+	print "%s" % matched
 else:
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))

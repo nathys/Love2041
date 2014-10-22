@@ -30,7 +30,7 @@ mainFunctions.header(title = "Love2041")
 if not "login" in form:
 	pages.login_page(loginstatus=0)
 elif form.getvalue("login") == 0:
-	pages.login_page(loginstatus=form.getvalue("login")
+	pages.login_page(loginstatus=form.getvalue("login"))
 else:
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))

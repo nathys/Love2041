@@ -1,2 +1,18 @@
 
-  <h1> things </h1>
+  <h1> Login: </h1>
+  {% if login is defined %}
+    {% if login is equalto 0 %}
+      <pre>
+        <p class="failed-login">
+        Login deatils are incorrect,
+        Please retry
+        </p>
+      </pre>>
+    {% endif%}
+  {% endif %}
+  
+<form aciton="" method="post">
+Username: <input type="text" name="username">
+Password: <input type-"text" name="password">
+</form> 
+  

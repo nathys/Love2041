@@ -7,6 +7,10 @@ import os
 import random
 import sqlite3
 import mainFunctions
+import jinja2
+
+templateLoader = jinja2.FileSystemLoader(serachpath="./templates")
+templateEnv = jinja2.Environment(loader=templateLoader)
 
 conn = sqlite3.connect('Love2041.db')
 c = conn.cursor()
@@ -168,3 +172,10 @@ def profile_page(username):
 	<input type="submit" value="Home Page"/>
 	</pre>
 	"""
+	
+	
+def login_page():
+	template = templateEnv.get_template("login.html")
+	output = template.render()
+	print output
+	

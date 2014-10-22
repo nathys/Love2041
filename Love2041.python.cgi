@@ -21,7 +21,7 @@ if "username" in form and "password" in form:
 		login = 0;
 		c.execute("Select password FROM users WHERE username = '%s'" % form.getvalue("username"))
 		matched = c.fetchone()
-		if form.getvalue("password") == matchedString:
+		if form.getvalue("password") == matched:
 			login = 1
 		else:
 			login = 2
@@ -29,8 +29,8 @@ if "username" in form and "password" in form:
 mainFunctions.header(title = "Love2041")
 if not "login" in form:
 	pages.login_page(loginstatus=0)
-elif form.getvalue("login") == 0:
-	pages.login_page(loginstatus=form.getvalue("login"))
+elif "%s" % form.getvalue("login") != "1":
+	pages.login_page(login)
 else:
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))

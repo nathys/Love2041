@@ -26,14 +26,16 @@ if not "login" in form:
 			login = 1
 		else:
 			login = 2
+	else:
+		login = 0
 else:
-	login = "".join(form.getvalue("login"))
+	login = int("".join(form.getvalue("login")))
 
 mainFunctions.header(title = "Love2041")
 if not "login" in form:
-	pages.login_page(loginstatus=0)
+	pages.login_page(loginstatus = 2)
 elif "%s" % form.getvalue("login") != "1":
-	pages.login_page(login)
+	pages.login_page(loginstatus = login)
 else:
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))

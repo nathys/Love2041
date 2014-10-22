@@ -18,7 +18,7 @@ c = conn.cursor()
 mainFunctions.header(title = "Love2041")
 form = cgi.FieldStorage()
 if not "login" in form:
-	login_page()
+	pages.login_page()
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))
 	else:

@@ -40,9 +40,9 @@ else:
 	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login } 
 	print"""
 	<form>
-	<input type="hidden" name="username" value"%(1)s">
-	<input type="hidden" name="password" value"%(2)s">
-	<input type="hidden" name="login" value"%(3)s">
+	<input type="hidden" name="username" value="%(1)s">
+	<input type="hidden" name="password" value="%(2)s">
+	<input type="hidden" name="login" value="%(3)s">
 	</form>
 	""" % info
 	

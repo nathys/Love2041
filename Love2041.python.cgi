@@ -41,8 +41,8 @@ else:
 	print"""
 	<form>
 	<input type="hidden" name="username" value"%(1)s">
-	<input type="hidden" name="username" value"%(2)s">
-	<input type="hidden" name="username" value"%(3)s">
+	<input type="hidden" name="password" value"%(2)s">
+	<input type="hidden" name="login" value"%(3)s">
 	</form>
 	""" % info
 	

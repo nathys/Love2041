@@ -18,7 +18,7 @@ form = cgi.FieldStorage()
 
 if "username" in form and "password" in form:
 	c.execute("Select password FROM users WHERE username = '%s'" % form.getvalue("username"))
-	matched = c.fetchall()
+	matched = c.fetchone()
 	if form.getvalue("password") == "".join(matched):
 		login = 1
 	else:

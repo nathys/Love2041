@@ -32,7 +32,7 @@ def main_page():
 			data = {"1": file, "2" : username, "3": username, "4": i, "5" : j}
 			print"""
 			<div class="thumbnail-profile" id="top%(4)s-left%(5)s">
-			<input type="image" name="pageusername" value="%(3)s" class="thumbnail-image" style="border: 0px; z-index: 1; width: 25em; height: 20em;">
+			<input type="image" name="pageusername" value="%(3)s" class="thumbnail-image" style="border: 0px; z-index: 1; width: 24em; height: 23em;">
 			<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
 			Username: %(3)s
 			</div>

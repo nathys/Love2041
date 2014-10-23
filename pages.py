@@ -175,5 +175,5 @@ def login_page(loginstatus):
 	
 def not_found():
 	template = templateEnv.get_template("notFound.html")
-	output = template.render(info)
+	output = template.render()
 	print output

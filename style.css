@@ -71,6 +71,11 @@ li.profile-list {
   color: #FF3C19;
 }
 
+.thumbnail-img {
+  position: relative;
+  left: 0%;
+  top: 0%;
+}
 
 .login-text {
   text-align: center;

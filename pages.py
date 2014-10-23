@@ -37,10 +37,8 @@ def main_page():
 			print"""
 			<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
 			Username: %(3)s
-			<form action="" method="post">
 			<input type="hidden" name="pageusername" value="%(3)s"/>
 			<input type="submit" value="View Profile"/>
-			</form>
 			</div>
 			""" % data
 			counter += 1
@@ -167,8 +165,6 @@ def profile_page(username):
 	
 	print """
 	<pre>
-	
-	<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
 	<input type="submit" value="Home Page"/>
 	</pre>
 	"""

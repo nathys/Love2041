@@ -27,18 +27,17 @@ def main_page():
 	for i in range(1,6):
 		for j in range(1,3):
 			name = user[counter]
-			keys = {"1":i,"2":j}
 			username = "".join(name)
+			keys = {"1":i,"2":j,"3": username}
 			file = "./students/%s/photo00.jpg" % name
 			data = {"1": file, "2" : username, "3": username}
 			print"""
 			<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 			""" % keys
 			print"""
+			<input type="button" name="pageusername" value="%(3)s" id="top%(1)s-left%(2)s" style="color: transparent; width: 2em; height: 2em;">
 			<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
 			Username: %(3)s
-			<input type="hidden" name="pageusername" value="%(3)s"/>
-			<input type="submit" value="View Profile"/>
 			</div>
 			""" % data
 			counter += 1

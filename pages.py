@@ -36,6 +36,8 @@ def main_page():
 			""" % keys
 			print"""
 			<input type="image" name="pageusername" value="%(3)s" id="top%(1)s-left%(2)s" style="width: 20em; height: 20em;">
+			""" % keys
+			print """
 			<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
 			Username: %(3)s
 			</div>

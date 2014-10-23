@@ -20,6 +20,7 @@ def get_profile():
 
 def footer():
 	print """
+	</form>
 	</body>
 	</html>
 	"""
@@ -35,13 +36,14 @@ def header(title):
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	</head>
 	<body>
+	<form action="" method="POST">
 	""" % {"1" : title}
+	
 	
 	print """
 	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
-		<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
 		<input class="top-bar-button" id="button1" type="submit" value="Home Page"/>
-		</form>
+
 	</div>
 	"""

@@ -19,11 +19,14 @@ form = cgi.FieldStorage()
 if "username" in form and "password" in form:
 	c.execute("Select password FROM users WHERE username = '%s'" % form.getvalue("username"))
 	matched = c.fetchone()
-	toMatch = re.sub("\t|\n|  +", "", matched[0])
-	if form.getvalue("password") == toMatch :
-		login = 1
+	if matched is None:
+		login = 3
 	else:
-		login = 2
+		toMatch = re.sub("\t|\n|  +", "", matched[0])
+		if form.getvalue("password") == toMatch :
+			login = 1
+		else:
+			login = 2
 else:
 	login = 0
 
@@ -39,11 +42,9 @@ else:
 		pages.main_page()
 	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login } 
 	print"""
-	<form>
-	<input type="hidden" name="username" value"%(1)s">
-	<input type="hidden" name="username" value"%(2)s">
-	<input type="hidden" name="username" value"%(3)s">
-	</form>
+	<input type="hidden" name="username" value="%(1)s">
+	<input type="hidden" name="password" value="%(2)s">
+	<input type="hidden" name="login" value="%(3)s">
 	""" % info
 	
 mainFunctions.footer()

@@ -4,8 +4,14 @@
     {% if login == 2 %}
       <pre>
         <p class="failed-login">
-        Login deatils are incorrect,
-        Please retry
+        Password is Wrong
+        </p>
+      </pre>
+    {% endif%}
+    {% if login == 3 %}
+      <pre>
+        <p class="failed-login">
+        User Does Not Exist
         </p>
       </pre>
     {% endif%}

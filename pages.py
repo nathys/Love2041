@@ -28,17 +28,12 @@ def main_page():
 		for j in range(1,3):
 			name = user[counter]
 			username = "".join(name)
-			keys = {"1":i,"2":j,"3": username}
 			file = "./students/%s/photo00.jpg" % name
-			data = {"1": file, "2" : username, "3": username}
+			data = {"1": file, "2" : username, "3": username, "4": i, "5" : j}
 			print"""
-			<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
-			""" % keys
-			print"""
-			<input type="image" name="pageusername" value="%(3)s" id="top%(1)s-left%(2)s" style="width: 20em; height: 20em;">
-			""" % keys
-			print """
-			<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
+			<div class="thumbnail-profile" id="top%(4)s-left%(5)s">
+			<input type="image" name="pageusername" value="%(3)s" id="top%(4)s-left%(5)s" style="width: 20em; height: 20em;">
+			<img iid="top%(4)s-left%(5)s" class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
 			Username: %(3)s
 			</div>
 			""" % data

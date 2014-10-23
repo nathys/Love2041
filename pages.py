@@ -35,7 +35,7 @@ def main_page():
 			<div class="thumbnail-profile" id="top%(1)s-left%(2)s">
 			""" % keys
 			print"""
-			<input type="submit" name="pageusername" value="%(3)s" id="top%(1)s-left%(2)s" style="background:transparent; border:2px solid; color:transparent; width: 2em; height: 2em;">
+			<input type="button" name="pageusername" value="%(3)s" id="top%(1)s-left%(2)s" style="background:transparent; border:2px solid; color:transparent; width: 2em; height: 2em;">
 			<img class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
 			Username: %(3)s
 			</div>

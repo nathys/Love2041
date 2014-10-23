@@ -43,8 +43,7 @@ def header(title):
 	print """
 	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
-		<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">
 		<input class="top-bar-button" id="button1" type="submit" value="Home Page"/>
-		</form>
+
 	</div>
 	"""

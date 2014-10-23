@@ -80,6 +80,11 @@ li.profile-list {
 .login-text {
   text-align: center;
 }
+
+.not-found-text {
+  text-align: center;
+  font-size: 28px;
+}
 #top1-left1{
   left: 0%;
   top: 0%;

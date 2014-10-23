@@ -43,7 +43,7 @@ def header(title):
 	<input type="hidden" name="password" value="%(2)s">
 	<input type="hidden" name="login" value="%(3)s">
 	</form>
-	""" % formInfo
+	""" 
 	
 	print """
 	<div class="header-container">

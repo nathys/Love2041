@@ -38,6 +38,14 @@ def header(title):
 	""" % {"1" : title}
 	
 	print """
+	<form>
+	<input type="hidden" name="username" value="%(1)s">
+	<input type="hidden" name="password" value="%(2)s">
+	<input type="hidden" name="login" value="%(3)s">
+	</form>
+	""" % formInfo
+	
+	print """
 	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
 		<form action="http://cgi.cse.unsw.edu.au/~z5017806/Love2041.python.cgi" method="post">

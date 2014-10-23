@@ -37,13 +37,6 @@ def header(title):
 	<body>
 	""" % {"1" : title}
 	
-	print """
-	<form>
-	<input type="hidden" name="username" value="%(1)s">
-	<input type="hidden" name="password" value="%(2)s">
-	<input type="hidden" name="login" value="%(3)s">
-	</form>
-	""" 
 	
 	print """
 	<div class="header-container">

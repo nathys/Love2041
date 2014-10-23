@@ -38,6 +38,13 @@ elif "%s" % form.getvalue("login") != "1" and login != 1:
 else:
 	if "pageusername" in form:
 		pages.profile_page(form.getvalue("pageusername"))
+	else if "searchusername" in form:
+		c.execute("Select username FROM users WHERE username = '%s'" % form.getvalue("searchusername"))
+		search = c.fetchone()
+		if search is None:
+			pages.not_found()
+		else:
+			pages.profile_page(form.getvalue("searchusername")
 	else:
 		pages.main_page()
 	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login } 

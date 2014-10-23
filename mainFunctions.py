@@ -20,6 +20,7 @@ def get_profile():
 
 def footer():
 	print """
+	</form>
 	</body>
 	</html>
 	"""
@@ -35,6 +36,7 @@ def header(title):
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	</head>
 	<body>
+	<form action="" method="POST">
 	""" % {"1" : title}
 	
 	

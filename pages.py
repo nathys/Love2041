@@ -33,7 +33,7 @@ def main_page():
 			print"""
 			<div class="thumbnail-profile" id="top%(4)s-left%(5)s">
 			<input type="image" name="pageusername" value="%(3)s" id="top%(4)s-left%(5)s" style="width: 20em; height: 20em;">
-			<img iid="top%(4)s-left%(5)s" class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
+			<img id="top%(4)s-left%(5)s" class="thumbnail-img" src="%(1)s" alt="profile of %(2)s"/>
 			Username: %(3)s
 			</div>
 			""" % data

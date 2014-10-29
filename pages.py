@@ -42,6 +42,15 @@ def main_page(searchFlag):
 				</div>
 				""" % data
 				counter += 1
+	if (counter == 0):
+		print """
+		<p class="not-found-text">
+		<pre>
+		No users found matching your search
+		</pre>
+		</p>
+		"""
+		
 	print """
 	</div>
 	"""

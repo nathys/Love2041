@@ -17,6 +17,11 @@ def get_profile():
 	names = c.fetchall()
 	return names
 
+def search_profile(searchname):
+	c.execute("SELECT username FROM users WHERE username LIKE '%s' LIMIT 10" % searchname)
+	names = c.fetchall()
+	return names
+
 
 def footer():
 	print """

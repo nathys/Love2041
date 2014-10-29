@@ -112,7 +112,7 @@ def profile_page(username):
 	hobbylist = "</li>\n<li class=\"profile-list\">".join(hobbies)
 	showlist = "</li>\n<li class=\"profile-list\">".join(shows)
 	booklist = "</li>\n<li class=\"profile-list\">".join(books)
-	info = {"1":username, "2":name, "3": gender[0], "4":movielist, "5":hobbylist, "6":booklist, "7":showlist, "8":bandlist}
+	info = {"1":username, "2":username, "3": gender[0], "4":movielist, "5":hobbylist, "6":booklist, "7":showlist, "8":bandlist}
 	print """
 	<div class="profile-container">
 	<pre>
@@ -122,7 +122,7 @@ def profile_page(username):
 	<img src="./students/%(1)s/photo00.jpg" style="vertical-align:middle" alt="Profile Photo">
 	
 	
-	Name:
+	Username:
 	
 		%(2)s
 	

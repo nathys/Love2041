@@ -18,7 +18,7 @@ def get_profile():
 	return names
 
 def search_profile(searchname):
-	c.execute("SELECT username FROM users WHERE username LIKE '%s' LIMIT 10" % searchname)
+	c.execute("SELECT username FROM users WHERE username LIKE '\%%s\%' LIMIT 10 COLLATE NOCASE" % searchname)
 	names = c.fetchall()
 	return names
 

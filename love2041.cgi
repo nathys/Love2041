@@ -29,6 +29,9 @@ if "username" in form and "password" in form:
 			login = 2
 else:
 	login = 0
+	
+if "logout" in form:
+	login = 0
 
 mainFunctions.header(title = "Love2041")
 if not "login" in form:

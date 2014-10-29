@@ -50,7 +50,7 @@ else:
 			else:
 				pages.profile_page(form.getvalue("searchusername"))
 		else:
-			pages.main_page()
+			pages.main_page(0)
 	else:
 		pages.main_page(0)
 	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login } 

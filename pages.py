@@ -25,7 +25,7 @@ def main_page(search):
 	if search == 0:
 		user = mainFunctions.get_profile()
 	else:
-		user = mainFunctions.search_profile()
+		user = mainFunctions.search_profile(search)
 	counter = 0
 	for i in range(1,6):
 		for j in range(1,3):

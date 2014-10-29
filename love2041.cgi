@@ -46,7 +46,7 @@ else:
 			c.execute("Select username FROM users WHERE username = '%s'" % form.getvalue("searchusername"))
 			search = c.fetchone()
 			if search is None:
-				pages.main_page(searchname = search)
+				pages.main_page(search)
 			else:
 				pages.profile_page(form.getvalue("searchusername"))
 		else:

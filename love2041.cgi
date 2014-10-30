@@ -49,9 +49,6 @@ if "logout" in form:
 	login = 0
 
 mainFunctions.header(title = "Love2041")
-print"""
-<h1> %s </h1> 
-""" % change
 if not "login" in form:
 	pages.login_page(loginstatus = login)
 elif login != 1:

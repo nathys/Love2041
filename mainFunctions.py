@@ -37,6 +37,7 @@ def get_profile(username):
 		for users in names:
 			f.write("%s" % users)
 		f.close()
+	return names
 		
 
 def search_profile(searchname):

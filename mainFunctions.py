@@ -35,7 +35,7 @@ def get_profile(username):
 		names = c.fetchall()
 		f = open("./students/%s/matches" % username, "w+")
 		for users in names:
-			f.write("%s" % users)
+			f.write("%s\n" % users)
 		f.close()
 	return names
 		

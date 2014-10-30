@@ -61,13 +61,13 @@ else:
 			c.execute("Select username FROM users WHERE username = '%s'" % form.getvalue("searchusername"))
 			search = c.fetchone()
 			if search is None:
-				pages.main_page(searchFlag = form.getvalue("searchusername"), offset = change)
+				pages.main_page(searchFlag = form.getvalue("searchusername"), offset = change,username = form.getvalue("username"))
 			else:
 				pages.profile_page(form.getvalue("searchusername"))
 		else:
-			pages.main_page(searchFlag = 0, offset = change)
+			pages.main_page(searchFlag = 0, offset = change,username = form.getvalue("username"))
 	else:
-		pages.main_page(searchFlag = 0, offset = change)
+		pages.main_page(searchFlag = 0, offset = change,username = form.getvalue("username"))
 	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login, "4": change } 
 	print"""
 	<input type="hidden" name="username" value="%(1)s">

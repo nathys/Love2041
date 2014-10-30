@@ -16,14 +16,14 @@ conn = sqlite3.connect('Love2041.db')
 c = conn.cursor()
 
 
-def main_page(searchFlag,offset):
+def main_page(searchFlag,offset,username):
 	print """
 	<p class="profile-text">
 	</p>
 	<div class="thumbnail-container">
 	"""
 	if searchFlag == 0:
-		user = mainFunctions.get_profile()
+		user = mainFunctions.get_profile(username)
 	else:
 		user = mainFunctions.search_profile(searchname = searchFlag)
 	counter = 0 + offset

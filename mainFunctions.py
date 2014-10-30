@@ -48,7 +48,7 @@ def header(title):
 	print """
 	<div class="header-container">
 		<img src="./images/logo.png" alt="Love2041" class="img-title">
-		<input class="top-bar-button" id="button1" type="submit" value="Home Page"/>
+		<input class="top-bar-button" id="button1" type="submit" name="Home Page" value="Home Page"/>
 		<input class="top-bar-button" name="searchusername" value="Search Usernames" type="text" id="button2"/>
 		<input class="top-bar-button" id="button3" type="submit" value="search"/>
 		<input class="top-bar-button" id="button4" type="submit" name="logout" value="logout"/>

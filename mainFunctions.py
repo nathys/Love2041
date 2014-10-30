@@ -17,7 +17,7 @@ def get_profile(username):
 	if os.path.exists("./students/%s/matches" % username):
 		f = open("./students/%s/matches" % username , "r")
 		for line in f:
-			name = re.sub("\r\n", "" , line)
+			name = re.sub("\n", "" , line)
 			names.append(name)
 		f.close()
 	else:

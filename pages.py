@@ -50,10 +50,13 @@ def main_page(searchFlag,offset,username):
 		</pre>
 		</p>
 		"""
+	if searchFlag == 0:	
+		print """
+		<input type="submit" class="top-bar-button" id="button5" name="next" value="Next"/>
+		<input type="submit" class="top-bar-button" id="button6" name="prev" value="Previous"/>
+		"""
 		
 	print """
-	<input type="submit" class="top-bar-button" id="button5" name="next" value="Next"/>
-	<input type="submit" class="top-bar-button" id="button6" name="prev" value="Previous"/>
 	</div>
 	"""
 	

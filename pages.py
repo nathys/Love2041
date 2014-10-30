@@ -53,6 +53,8 @@ def main_page(searchFlag):
 		
 	print """
 	</div>
+	<input type="submit" class="top-bar-button" id="button5" name="next" value="Next">
+	<input type="submit" class="top-bar-button" id="button6" name="prev" value="Previous">
 	"""
 	
 

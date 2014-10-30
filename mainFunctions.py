@@ -17,7 +17,8 @@ def get_profile(username):
 	if os.path.exists("./students/%s/matches" % username):
 		f = open("./students/%s/matches" % username , "r")
 		for line in f:
-			names.append(line)
+			name = re.sub("\r\n", "" , line)
+			names.append(name)
 		f.close()
 	else:
 		genderFlag = 0

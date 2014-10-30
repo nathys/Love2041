@@ -16,7 +16,7 @@ c = conn.cursor()
 ##########
 form = cgi.FieldStorage()
 if "change" in form:
-	change = form.getvalue("change")
+	change = int(form.getvalue("change"))
 	if "next" in form:
 		change =+ 10
 	if "prev" in form:

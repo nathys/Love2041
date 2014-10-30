@@ -15,6 +15,21 @@ c = conn.cursor()
 
 ##########
 form = cgi.FieldStorage()
+if "change" in form:
+	change = form.getvalue("change")
+	if "next" in form:
+		change += 10
+	if "prev" in form:
+		change -= 10
+	if change < 0:
+		change = 0
+	if change >= 100:
+		change = 90
+	if "Home Page" in form:
+		change = 0
+else:
+	change = 0
+	
 
 if "username" in form and "password" in form:
 	c.execute("Select password FROM users WHERE username = '%s'" % form.getvalue("username"))
@@ -46,18 +61,19 @@ else:
 			c.execute("Select username FROM users WHERE username = '%s'" % form.getvalue("searchusername"))
 			search = c.fetchone()
 			if search is None:
-				pages.main_page(form.getvalue("searchusername"))
+				pages.main_page(searchFlag = form.getvalue("searchusername"), offset = change)
 			else:
 				pages.profile_page(form.getvalue("searchusername"))
 		else:
-			pages.main_page(0)
+			pages.main_page(searchFlag = 0, offest = change)
 	else:
-		pages.main_page(0)
-	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login } 
+		pages.main_page(searchFlag = 0, offset change)
+	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login, "4": change } 
 	print"""
 	<input type="hidden" name="username" value="%(1)s">
 	<input type="hidden" name="password" value="%(2)s">
 	<input type="hidden" name="login" value="%(3)s">
+	<input type="hidden" name="change" value="%(4)s">
 	""" % info
 	
 mainFunctions.footer()

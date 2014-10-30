@@ -67,7 +67,7 @@ else:
 		else:
 			pages.main_page(searchFlag = 0, offest = change)
 	else:
-		pages.main_page(searchFlag = 0, offset change)
+		pages.main_page(searchFlag = 0, offset = change)
 	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login, "4": change } 
 	print"""
 	<input type="hidden" name="username" value="%(1)s">

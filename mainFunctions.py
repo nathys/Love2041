@@ -20,6 +20,7 @@ def get_profile(username):
 			names.append(line)
 		f.close()
 	else:
+		genderFlag = 0
 		pref = open("./students/%s/preferences.txt" % username,"r")
 		for line in pref:
 			if genderFlag == 1:

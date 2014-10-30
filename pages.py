@@ -176,7 +176,7 @@ def profile_page(username):
 	
 	print """
 	<pre>
-	<input type="submit" value="Home Page"/>
+	<input type="submit" name="Home Page" value="Home Page"/>
 	</pre>
 	"""
 	

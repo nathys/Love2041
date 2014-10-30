@@ -18,9 +18,9 @@ form = cgi.FieldStorage()
 if "change" in form:
 	change = form.getvalue("change")
 	if "next" in form:
-		change += 10
+		change =+ 10
 	if "prev" in form:
-		change -= 10
+		change =- 10
 	if change < 0:
 		change = 0
 	if change >= 100:

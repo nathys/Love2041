@@ -65,7 +65,7 @@ else:
 			else:
 				pages.profile_page(form.getvalue("searchusername"))
 		else:
-			pages.main_page(searchFlag = 0, offest = change)
+			pages.main_page(searchFlag = 0, offset = change)
 	else:
 		pages.main_page(searchFlag = 0, offset = change)
 	info = {"1" : form.getvalue("username"), "2": form.getvalue("password"), "3" : login, "4": change } 

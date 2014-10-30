@@ -12,13 +12,34 @@ import sqlite3
 conn = sqlite3.connect('Love2041.db')
 c = conn.cursor()
 
-def get_profile():
-	c.execute("SELECT username FROM users ORDER BY RANDOM() LIMIT 10")
-	names = c.fetchall()
-	return names
+def get_profile(username):
+	names = []
+	if os.path.exists("./students/%s/matches" % username):
+		f = open("./students/%s/matches" % username , "r")
+		for line in f:
+			names.append(line)
+		f.close()
+	else:
+		pref = open("./students/%s/preferences.txt" % username,"r")
+		for line in pref:
+			if genderFlag == 1:
+				if re.match("\s*female\s*",line):
+					genfer = "female"
+				else:
+					gender = "male"
+			if re.match("\s*gender:\s*",line):
+				genderFlag = 1
+		pref.close()
+		c.execute("SELECT username FROM users WHERE gender ='%s'" % gender)
+		names = c.fetchall()
+		f = open("./students/%s/matches" % username, "r+")
+		for users in names:
+			f.write("%s" % users)
+		f.close()
+		
 
 def search_profile(searchname):
-	c.execute("SELECT username FROM users WHERE username LIKE '%%%s%%' COLLATE NOCASE LIMIT 10" % searchname)
+	c.execute("SELECT username FROM users WHERE username LIKE '%%%s%%' COLLATE NOCASE LIMIT 100" % searchname)
 	names = c.fetchall()
 	return names
 

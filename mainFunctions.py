@@ -33,7 +33,7 @@ def get_profile(username):
 		pref.close()
 		c.execute("SELECT username FROM users WHERE gender ='%s'" % gender)
 		names = c.fetchall()
-		f = open("./students/%s/matches" % username, "r+")
+		f = open("./students/%s/matches" % username, "w+")
 		for users in names:
 			f.write("%s" % users)
 		f.close()

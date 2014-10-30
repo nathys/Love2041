@@ -16,7 +16,7 @@ conn = sqlite3.connect('Love2041.db')
 c = conn.cursor()
 
 
-def main_page(searchFlag):
+def main_page(searchFlag,offset):
 	print """
 	<p class="profile-text">
 	</p>
@@ -26,7 +26,7 @@ def main_page(searchFlag):
 		user = mainFunctions.get_profile()
 	else:
 		user = mainFunctions.search_profile(searchname = searchFlag)
-	counter = 0
+	counter = 0 + offset
 	for i in range(1,6):
 		for j in range(1,3):
 			if counter < len(user):

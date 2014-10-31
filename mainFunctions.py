@@ -35,7 +35,7 @@ def get_profile(username):
 		c.execute("SELECT year FROM users WHERE username = '%s'" % username)
 		year = c.fetchone()
 		info = {"1" : gender , "2": year}
-		c.execute("SELECT username FROM users WHERE gender ='%(1)s' ORDER by year ABS(%(2)s - value)" % info)
+		c.execute("SELECT username FROM users WHERE gender ='%(1)s' ORDER by ABS(year - %(2)s)" % info)
 		names = c.fetchall()
 		f = open("./students/%s/matches" % username, "w+")
 		for users in names:

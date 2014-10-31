@@ -34,6 +34,9 @@ def get_profile(username):
 		pref.close()
 		c.execute("SELECT year FROM users WHERE username = '%s'" % username)
 		year = c.fetchone()
+		print """
+		<h1> %s </h1>
+		""" % year
 		info = {"1" : gender , "2": year}
 		c.execute("SELECT username FROM users WHERE gender ='%(1)s' ORDER by ABS(year - %(2)s)" % info)
 		names = c.fetchall()

@@ -12,47 +12,48 @@ c.execute('''CREATE TABLE users
 direcs = os.listdir('./students/')
 idnum  = 0
 for line in direcs:
-	idnum += 1
-	username = line
-	file = "./students/%s/profile.txt" % username
-	f = open(file,"r")
-	flag = 0
-	genderflag = 0
-	yearflag = 0
-	heightflag = 0
-	for words in f:
-		if flag == 1:
-			password = words
-			flag = 0
-		if genderflag == 1:
-			if re.search("^\s*female",words):
-				gender = "female"
-			else:
-				gender = "male"
-			genderflag = 0
-		
-		if yearflag == 1:
-		    year = re.sub("/[0-9]{2}/[0-9]{2}", "",words)
-		    year = re.sub("\t|\n|  +", "" , year)
-		    yearflag = 0
-            
+    idnum += 1
+    username = line
+    file = "./students/%s/profile.txt" % username
+    f = open(file,"r")
+    flag = 0
+    genderflag = 0
+    yearflag = 0
+    heightflag = 0
+    for words in f:
+        if flag == 1:
+            password = words
+            flag = 0
+        if genderflag == 1:
+            if re.search("^\s*female",words):
+                gender = "female"
+            else:
+                gender = "male"
+            genderflag = 0
+        
+        if yearflag == 1:
+            yearwith = re.sub("/[0-9]{2}/[0-9]{2}", "",words)
+            year = re.sub("\t|\n|  +", "" , yearwith)
+            yearflag = 0
+
         if heightflag == 1:
             height = re.sub("\t|\n|  +" , "" , words)
-            heigthflag = 0
-        
-        if re.search("^\s*password:",words):
-		    flag = 1
-		if re.search("^\s*gender:",words):
-			genderflag = 1
-		if re.search("\s*birthdate:", words):
-		    yearflag = 1
-		if re.search("\s*height:", words):
-		    heightflag = 1
+            height = re.sub("m", "", height)
+            heightflag = 0
 
-	info = {"1": username,"2":password, "3": gender, "4" : year, "5": height}
-	c.execute("INSERT INTO users VALUES ('%(1)s','%(2)s','%(3)s','%(4)s','%(5)s')" % info ) 
-	f.close()
-	
+        if re.search("^\s*password:", words):
+            flag = 1
+        if re.search("^\s*gender:",words):
+            genderflag = 1
+        if re.search("\s*birthdate:", words):
+            yearflag = 1
+        if re.search("\s*height:", words):
+            heightflag = 1
+
+    info = {"1": username,"2":password, "3": gender, "4" : year, "5": height}
+    c.execute("INSERT INTO users VALUES ('%(1)s','%(2)s','%(3)s','%(4)s','%(5)s')" % info ) 
+    f.close()
+    
 
 # Save (commit) the changes
 conn.commit()
